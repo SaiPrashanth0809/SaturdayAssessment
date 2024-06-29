@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class Banking {
-    public static int bank(int balance, int withdrawl){
+    public   int bank(int balance, int withdrawl){
         return balance - withdrawl ;
       
         
@@ -10,12 +10,15 @@ public class Banking {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Your Balance: ");
         int a= sc.nextInt();
         System.out.println("Account balance: "+ a);
+        System.out.println("Enter Your Withdrawl: ");
         int c = sc .nextInt();
         System.out.println("Withdrawl Amount: "+c);
-         int f=  bank(a , c);
-        System.out.println("Bank Balance: "+f);
+        Banking b = new Banking();
+         int d =  b.bank(a , c);
+        System.out.println("Bank Balance: "+d);
         if(a > c){
             System.out.println("completion Transation"); 
         }
