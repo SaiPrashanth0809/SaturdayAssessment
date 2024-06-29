@@ -22,10 +22,7 @@ public class Banking {
         else{
             System.out.println("Incomplete Transation");
         }
-         
-        
-
-        
+        sc.close();
     }
     
 }
