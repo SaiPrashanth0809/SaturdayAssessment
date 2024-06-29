@@ -3,7 +3,14 @@ import java.util.Scanner;
 
 public class Banking {
     public   int bank(int balance, int withdrawl){
-        return balance - withdrawl ;
+        if(withdrawl > balance){
+            System.out.println("incompletion Transation"); 
+        }
+        else{
+            balance = balance - withdrawl;
+            System.out.println("complete Transation");
+        }
+        return  balance;
       
         
 
@@ -17,14 +24,8 @@ public class Banking {
         int c = sc .nextInt();
         System.out.println("Withdrawl Amount: "+c);
         Banking b = new Banking();
-         int d =  b.bank(a , c);
+        int d =  b.bank(a , c);
         System.out.println("Bank Balance: "+d);
-        if(a > c){
-            System.out.println("completion Transation"); 
-        }
-        else{
-            System.out.println("Incomplete Transation");
-        }
         sc.close();
     }
     
